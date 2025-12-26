@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start an Order | Midnight Owls</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <a href="#main" class="skip-link">Skip to Content</a>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="images/owl-logo.png" alt="Midnight Owls">
+                </a>
+                <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="work.html">Work</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <!-- Highlighted Quote Button -->
+                <a href="quote.html" class="btn btn-primary"
+                    style="background-color: var(--color-owl-gold); color: var(--color-midnight-black);">Start an
+                    Order</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="hero hero-page">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Start Your Order</h1>
+                    <p class="hero-subtitle">Tell us about your project. We'll get back to you with a quote and digital
+                        mockup.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding">
+            <div class="container" style="max-width: 800px;">
+                <form>
+                    <!-- Section 1: Contact -->
+                    <h3 style="margin-bottom: 1.5rem; color: var(--color-off-white);">1. Contact Details</h3>
+                    <div class="grid-2 mb-2" style="gap: 1.5rem; align-items: start;">
+                        <div>
+                            <label for="quote-name" class="form-label">Name</label>
+                            <input type="text" id="quote-name" class="form-input" required>
+                        </div>
+                        <div>
+                            <label for="quote-email" class="form-label">Email</label>
+                            <input type="email" id="quote-email" class="form-input" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="quote-org" class="form-label">Organization / Brand</label>
+                        <input type="text" id="quote-org" class="form-input">
+                    </div>
+
+                    <!-- Section 2: Product & Design -->
+                    <h3 style="margin-top: 3rem; margin-bottom: 1.5rem; color: var(--color-off-white);">2. Create Your
+                        Product</h3>
+
+                    <p class="form-label mb-2">Select a Garment Base</p>
+                    <div class="garment-grid mb-4">
+                        <label class="garment-option">
+                            <input type="radio" name="garment" value="tshirt" checked>
+                            <div class="garment-card">
+                                <div class="garment-icon">👕</div>
+                                <span>T-Shirt</span>
+                            </div>
+                        </label>
+                        <label class="garment-option">
+                            <input type="radio" name="garment" value="hoodie">
+                            <div class="garment-card">
+                                <div class="garment-icon">🧥</div>
+                                <span>Hoodie</span>
+                            </div>
+                        </label>
+                        <label class="garment-option">
+                            <input type="radio" name="garment" value="longsleeve">
+                            <div class="garment-card">
+                                <div class="garment-icon">👔</div>
+                                <span>Long Sleeve</span>
+                            </div>
+                        </label>
+                        <label class="garment-option">
+                            <input type="radio" name="garment" value="tote">
+                            <div class="garment-card">
+                                <div class="garment-icon">👜</div>
+                                <span>Tote Bag</span>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="grid-split mb-4" style="align-items: start; gap: 2rem;">
+                        <!-- Left: Upload & Details -->
+                        <div>
+                            <div class="form-group">
+                                <label for="quantity" class="form-label">Approximate Quantity</label>
+                                <input type="number" id="quantity" class="form-input" placeholder="e.g. 50">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Upload Artwork</label>
+                                <div class="file-upload" id="drop-zone">
+                                    <p style="color: var(--color-cool-gray);">Click to upload logo/art</p>
+                                    <p style="font-size: 0.8rem; color: rgba(255,255,255,0.4); margin-top: 0.5rem;"
+                                        id="file-name">Accepting PNG, JPG</p>
+                                    <input type="file" id="artwork-upload" accept="image/*" style="display: none;">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="design-notes" class="form-label">Design Notes</label>
+                                <textarea id="design-notes" class="form-textarea" rows="3"
+                                    placeholder="Placement instructions, ink colors, etc."></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Right: Live Mockup -->
+                        <div class="mockup-container">
+                            <label class="form-label text-center mb-2">Live Mockup Preview</label>
+                            <div class="mockup-stage" id="mockup-stage">
+                                <!-- Base Image (Placeholder for now) -->
+                                <div class="mockup-base" id="mockup-base"></div>
+                                <!-- Overlay Image -->
+                                <img id="mockup-overlay" src="" alt="" class="mockup-overlay">
+                            </div>
+                            <p class="text-small text-center mt-2 text-muted"
+                                style="font-size: 0.8rem; color: var(--color-cool-gray);">*Visualization only. Final
+                                proof provided for approval.</p>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 4rem; text-align: center;">
+                        <button type="submit" class="btn btn-primary" style="width: 100%; max-width: 300px;">Request
+                            Quote</button>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
