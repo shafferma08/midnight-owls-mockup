@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Midnight Owls</title>
+    <title>Contact | Midnight Owls (formerly Groovy Graphics)</title>
+    <meta name="description"
+        content="Contact Midnight Owls (formerly Groovy Graphics) for your screenprinting, embroidery, and promotional product needs.">
+    <meta name="keywords" content="Midnight Owls, Groovy Graphics, Contact, Screenprinting, Embroidery">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@600;700&display=swap"
@@ -19,12 +22,13 @@
         <div class="container">
             <nav>
                 <a href="index.html" class="logo">
-                    <img src="images/owl-logo.png" alt="Midnight Owls">
+                    Midnight<span>Owls</span>
                 </a>
                 <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
                 <div class="nav-links">
                     <a href="index.html">Home</a>
                     <a href="services.html">Services</a>
+                    <a href="catalogs.html">Catalogs</a>
                     <a href="work.html">Work</a>
                     <a href="about.html">About</a>
                     <a href="contact.html" class="active">Contact</a>
@@ -35,11 +39,16 @@
     </header>
 
     <main id="main">
-        <section class="hero hero-page">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Get in Touch</h1>
-                    <p class="hero-subtitle">Questions? Collabs? Just want to say hello?</p>
+        <!-- Modern Hero: Contact -->
+        <section class="hero-wrapper hero-inner">
+            <div class="hero-mesh mesh-teal"></div>
+            <div class="container" style="position: relative; z-index: 2;">
+                <div class="hero-content hero-center-text">
+                    <span class="hero-pill">👋 Get In Touch</span>
+                    <h1 class="hero-title-page">Let's <span class="text-gradient-teal">Create</span></h1>
+                    <p class="hero-subtitle-modern">
+                        Have a project in mind? We're ready to listen. Drop us a line or swing by the studio.
+                    </p>
                 </div>
             </div>
         </section>
@@ -83,6 +92,52 @@
             </div>
         </section>
     </main>
+    <!-- Footer -->
+    <footer>
+        <div class="container animate-on-scroll">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        Midnight<span>Owls</span>
+                    </a>
+                    <p>A creative collective and screenprinting studio based in the dark hours. Dedicated to quality,
+                        craft, and the creative community.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Studio</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="catalogs.html">Catalogs</a></li>
+                        <li><a href="work.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#printing">Screenprinting</a></li>
+                        <li><a href="services.html#branding">Branding</a></li>
+                        <li><a href="services.html#apparel">Apparel Sourcing</a></li>
+                        <li><a href="quote.html">Get a Quote</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="mailto:hello@midnightowls.com">hello@midnightowls.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Midnight Owls Creative. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts/main.js"></script>
 </body>
 
 </html>

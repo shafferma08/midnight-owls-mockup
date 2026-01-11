@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Midnight Owls | Creative Cluster & Print Studio</title>
     <meta name="description"
-        content="Midnight Owls is a creative collective and screenprinting studio specializing in premium apparel, bold design, and digital craftsmanship.">
+        content="Midnight Owls (formerly Groovy Graphics) is a creative collective and screenprinting studio specializing in premium apparel, embroidery, and promotional products.">
+    <meta name="keywords"
+        content="Midnight Owls, Groovy Graphics, Screenprinting, Embroidery, Promotional Products, Signs, Hats, Coozies, Plastisol, Plasticharge, Custom Apparel">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,12 +29,13 @@
         <div class="container">
             <nav>
                 <a href="index.html" class="logo">
-                    <img src="images/owl-logo.png" alt="Midnight Owls">
+                    Midnight<span>Owls</span>
                 </a>
                 <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
                 <div class="nav-links">
                     <a href="index.html" class="active">Home</a>
                     <a href="services.html">Services</a>
+                    <a href="catalogs.html">Catalogs</a>
                     <a href="work.html">Work</a>
                     <a href="about.html">About</a>
                     <a href="contact.html">Contact</a>
@@ -43,109 +46,207 @@
     </header>
 
     <main id="main">
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="container">
-                <div class="grid-split">
+        <!-- Modern Hero Section -->
+        <section class="hero-wrapper hero-home">
+            <div class="hero-mesh"></div>
+            <div class="container" style="position: relative; z-index: 2;">
+                <div class="grid-split align-center" style="gap: 4rem;">
                     <div class="hero-content">
-                        <h1 class="animate-on-scroll">Print Bold. Build Big. <br>Create Fearlessly.</h1>
-                        <p class="hero-subtitle animate-on-scroll delay-100">
-                            Midnight Owls is a creative collective and screenprinting studio specializing in premium
-                            apparel, bold design, and digital craftsmanship. We help brands and creators bring their
-                            ideas
-                            to life.
-                        </p>
-                        <div class="cta-group animate-on-scroll delay-200">
-                            <a href="work.html" class="btn btn-outline">View Our Work</a>
+                        <div class="animate-on-scroll">
+                            <span class="hero-pill">✨ Established 1999</span>
+                            <h1 class="hero-title-large">
+                                Print Bold.<br>
+                                <span class="text-gradient-gold">Create Fearlessly.</span>
+                            </h1>
+                            <p class="hero-subtitle-modern">
+                                Midnight Owls is a creative collective and screenprinting studio specializing in premium
+                                apparel, bold design, and digital craftsmanship.
+                            </p>
+                            <div class="cta-group">
+                                <a href="quote.html" class="btn btn-primary">Start a Project</a>
+                                <a href="work.html" class="btn btn-outline">View Our Work</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="hero-graphic animate-on-scroll delay-300">
-                        <img src="images/hero-graphic.png" alt="Abstract Owl Art"
-                            style="width: 100%; border-radius: 8px; box-shadow: 0 0 40px rgba(14, 90, 106, 0.2);">
+                    <div class="hero-graphic animate-on-scroll delay-200">
+                        <div class="glass-panel"
+                            style="padding: 1rem; border-radius: 12px; transform: rotate(2deg); border: 1px solid rgba(255,255,255,0.1);">
+                            <img src="images/hero-graphic.png" alt="Midnight Owls Art"
+                                style="width: 100%; border-radius: 8px; box-shadow: 0 20px 80px -20px rgba(0,0,0,0.5);">
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Value Proposition -->
-        <section class="section-padding bg-navy">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">The Midnight Standard</h2>
-                    <p class="section-desc animate-on-scroll">Midnight Owls is a modern screenprinting studio and
-                        creative
-                        collective focused on high-quality apparel, thoughtful design, and clean execution.</p>
-                </div>
-                <div class="grid-3">
-                    <div class="card animate-on-scroll delay-100">
-                        <div class="card-icon" aria-hidden="true">01</div>
-                        <h3>Premium Craft</h3>
-                        <p>We obsess over ink, fabric, and finish. Every print is inspected to ensure it meets our
-                            rigorous
-                            standards.</p>
-                    </div>
-                    <div class="card animate-on-scroll delay-200">
-                        <div class="card-icon" aria-hidden="true">02</div>
-                        <h3>Design Forward</h3>
-                        <p>We are artists first. Our in-house creative team ensures your artwork looks stunning on any
-                            garment.</p>
-                    </div>
-                    <div class="card animate-on-scroll delay-300">
-                        <div class="card-icon" aria-hidden="true">03</div>
-                        <h3>Modern Process</h3>
-                        <p>From digital mockups to streamlined ordering, we make the complex process of custom apparel
-                            simple.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Featured Feature -->
-        <section class="section-padding">
-            <div class="container">
-                <div class="grid-split">
-                    <div class="animate-on-scroll">
-                        <img src="images/apparel-mockup.png" alt="Premium Apparel Print" style="border-radius: 8px;">
-                    </div>
-                    <div class="animate-on-scroll delay-100">
-                        <h2 class="section-title">Not Just a Print Shop.</h2>
-                        <p class="section-desc mb-2">
-                            We believe great work lives at the intersection of craftsmanship and vision. Whether it’s a
-                            run
-                            of custom shirts, a brand refresh, or a website build, we approach every project with care,
-                            clarity, and attention to detail.
-                        </p>
-                        <a href="work.html" class="btn btn-outline">See the Portfolio</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Capabilities / Services Teaser -->
-        <section class="section-padding">
+        <!-- Production & Services (What We Create) -->
+        <section class="section-padding" style="background-color: var(--color-midnight-black);">
             <div class="container">
                 <div class="section-header text-center mx-auto" style="max-width: 800px;">
-                    <h2 class="section-title">Our Capabilities</h2>
-                    <p class="section-desc mx-auto">Everything you need to elevate your brand presence,
-                        under one roof.</p>
+                    <h2 class="section-title text-gradient-gold">What We Create</h2>
+                    <p class="section-desc mx-auto">From high-volume runs to one-off masterpieces, we have the
+                        specialized equipment for every job.</p>
                 </div>
 
-                <div class="grid-3 mt-4">
-                    <div class="card" style="background: transparent; border: 1px solid var(--color-deep-teal);">
-                        <h3 style="color: var(--color-deep-teal);">Custom Apparel</h3>
-                        <p>Premium screenprinting and apparel sourcing for brands that demand quality.</p>
+                <div class="grid-3">
+                    <!-- Card 1: Screenprinting -->
+                    <div class="service-detail-card animate-on-scroll delay-100">
+                        <h3>Premium Screenprinting</h3>
+                        <div class="ink-type">
+                            <span class="ink-dot ink-plastisol"></span>
+                            <span>Plastisol & Plasticharge</span>
+                        </div>
+                        <p style="margin-bottom: 1rem; color: var(--color-cool-gray);">
+                            We specialize in industry-standard plastisol and plasticharge inks for prints that pop and
+                            last. For a softer feel, we utilize waterbased underbases.
+                        </p>
+                        <p
+                            style="font-size: 0.85rem; color: var(--color-cool-gray); font-style: italic; margin-bottom: 1.5rem;">
+                            *We do not use acrylic paints.
+                        </p>
+                        <div style="margin-top: auto;">
+                            <span class="pill-tag">Soft Hand</span>
+                            <span class="pill-tag">Vibrant Color</span>
+                            <span class="pill-tag">High Durability</span>
+                        </div>
                     </div>
-                    <div class="card" style="background: transparent; border: 1px solid var(--color-indigo-violet);">
-                        <h3 style="color: var(--color-indigo-violet);">Brand Support</h3>
-                        <p>Creative direction, logo systems, and visual identity for growing businesses.</p>
+
+                    <!-- Card 2: Promo & Merch -->
+                    <div class="service-detail-card animate-on-scroll delay-200">
+                        <h3>Promo & Embroidery</h3>
+                        <p style="margin-bottom: 1.5rem; color: var(--color-cool-gray);">
+                            Beyond the press, we offer professional embroidery and a vast range of promotional products
+                            to get your brand seen everywhere.
+                        </p>
+                        <div style="margin-top: auto; display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                            <span class="pill-tag" style="border-color: var(--color-magenta-plum);">Hats</span>
+                            <span class="pill-tag" style="border-color: var(--color-magenta-plum);">Embroidery</span>
+                            <span class="pill-tag" style="border-color: var(--color-magenta-plum);">Coozies</span>
+                            <span class="pill-tag" style="border-color: var(--color-magenta-plum);">Signs</span>
+                            <span class="pill-tag" style="border-color: var(--color-magenta-plum);">Stickers</span>
+                        </div>
                     </div>
-                    <div class="card" style="background: transparent; border: 1px solid var(--color-magenta-plum);">
-                        <h3 style="color: var(--color-magenta-plum);">Digital & Web</h3>
-                        <p>Modern web design and digital presence to spark connection and growth.</p>
+
+                    <!-- Card 3: Digital & No Minimums -->
+                    <div class="service-detail-card animate-on-scroll delay-300">
+                        <h3>Digital & No Minimums</h3>
+                        <p style="margin-bottom: 1.5rem; color: var(--color-cool-gray);">
+                            Need just a few shirts? No problem. Our Direct to Film (DTF) transfer technology allows for
+                            full-color prints without the high setup costs or minimums.
+                        </p>
+                        <ul style="color: var(--color-off-white); font-size: 0.95rem; margin-top: auto;">
+                            <li style="margin-bottom: 0.5rem;">✓ No Minimum Orders</li>
+                            <li style="margin-bottom: 0.5rem;">✓ Full Color Details</li>
+                            <li>✓ Fast Turnaround</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="text-center" style="margin-top: 3rem;">
-                    <a href="services.html" class="btn btn-outline">Explore All Services</a>
+            </div>
+        </section>
+
+        <!-- Explore & Support Grid -->
+        <section class="section-padding bg-navy">
+            <div class="container">
+                <div class="grid-3">
+                    <div class="glass-panel animate-on-scroll"
+                        style="padding: 2rem; border-radius: 12px; text-align: center; border: 1px solid rgba(255,255,255,0.05);">
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem;">📓</div>
+                        <h3 class="mb-2" style="color: var(--color-off-white);">Browse Catalogs</h3>
+                        <p class="mb-2" style="color: var(--color-cool-gray); font-size: 0.9rem;">
+                            Explore our curated collection of premium garments from top brands.
+                        </p>
+                        <a href="catalogs.html" class="btn btn-outline" style="width: 100%;">View Catalogs</a>
+                    </div>
+                    <div class="glass-panel animate-on-scroll delay-100"
+                        style="padding: 2rem; border-radius: 12px; text-align: center; border: 1px solid rgba(255,255,255,0.05);">
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem;">🦉</div>
+                        <h3 class="mb-2" style="color: var(--color-off-white);">Who We Are</h3>
+                        <p class="mb-2" style="color: var(--color-cool-gray); font-size: 0.9rem;">
+                            Learn about the Midnight Owls collective, our history, and our craft.
+                        </p>
+                        <a href="about.html" class="btn btn-outline" style="width: 100%;">Read Our Story</a>
+                    </div>
+                    <div class="glass-panel animate-on-scroll delay-200"
+                        style="padding: 2rem; border-radius: 12px; text-align: center; border: 1px solid rgba(255,255,255,0.05);">
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem;">❓</div>
+                        <h3 class="mb-2" style="color: var(--color-off-white);">Have Questions?</h3>
+                        <p class="mb-2" style="color: var(--color-cool-gray); font-size: 0.9rem;">
+                            Common questions about minimums, artwork, and turnaround times.
+                        </p>
+                        <a href="services.html#faq" class="btn btn-outline" style="width: 100%;">Visit FAQ</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Standard / CTA -->
+        <section class="section-padding" style="background-color: var(--color-midnight-black);">
+            <div class="container">
+                <div class="grid-split align-center">
+                    <div class="animate-on-scroll">
+                        <h2 class="section-title">The Midnight Standard</h2>
+                        <p class="section-desc mb-2">
+                            We believe great work lives at the intersection of craftsmanship and vision. Whether it’s
+                            500 shirts for your band or 50 hats for your team, we treat every piece of apparel with the
+                            same obsessive attention to detail.
+                        </p>
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                            <a href="quote.html" class="btn btn-primary">Get a Quote</a>
+                            <a href="services.html" class="btn btn-outline">Full Services</a>
+                        </div>
+                    </div>
+                    <div class="animate-on-scroll delay-100 glass-panel"
+                        style="padding: 2rem; border-radius: 8px; text-align: center;">
+                        <h3 class="mb-2" style="color: var(--color-off-white)">Ready to Print?</h3>
+                        <p style="color: var(--color-cool-gray); margin-bottom: 2rem;">
+                            Our process is simple. Send us your art (or let us design it), pick your garment, and we
+                            handle the rest.
+                        </p>
+                        <div class="garment-grid" style="justify-content: center;">
+                            <!-- Icons representing products (simple text/unicode for now) -->
+                            <div style="font-size: 2rem;">👕</div>
+                            <div style="font-size: 2rem;">🧢</div>
+                            <div style="font-size: 2rem;">🧵</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rebrand Evolution Section -->
+        <section class="rebrand-section section-padding">
+            <div class="container">
+                <div class="grid-split align-center">
+                    <div class="animate-on-scroll">
+                        <span class="rebrand-badge">Important Update</span>
+                        <h2 class="section-title text-gradient-teal">Groovy Graphics is now Midnight Owls</h2>
+                        <p class="section-desc" style="color: var(--color-off-white); font-size: 1.1rem;">
+                            The same team, the same quality, but with a new vision. We are transitioning from Groovy
+                            Graphics to Midnight Owls to better reflect our expanded capabilities and creative
+                            direction.
+                        </p>
+                        <p class="mt-2" style="color: var(--color-cool-gray);">
+                            Don't worry—if you're looking for Groovy Graphics, you're in the right place. We still offer
+                            the personal service you love, now with enhanced technology like Direct to Film transfers
+                            for no-minimum orders and premium branding services.
+                        </p>
+                    </div>
+                    <div class="animate-on-scroll delay-100"
+                        style="background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
+                        <h3 class="mb-2" style="color: var(--color-owl-gold)">Expanded Capabilities</h3>
+                        <ul style="color: var(--color-off-white); display: flex; flex-direction: column; gap: 1rem;">
+                            <li style="display: flex; align-items: center; gap: 10px;">
+                                <span style="color: var(--color-electric-teal);">✓</span> No Minimums (Direct to Film)
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 10px;">
+                                <span style="color: var(--color-electric-teal);">✓</span> Premium Plastisol &
+                                Plasticharge Prints
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 10px;">
+                                <span style="color: var(--color-electric-teal);">✓</span> Full Branding & Design Support
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -157,7 +258,7 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="index.html" class="logo">
-                        <img src="images/owl-logo.png" alt="Midnight Owls">
+                        Midnight<span>Owls</span>
                     </a>
                     <p>A creative collective and screenprinting studio based in the dark hours. Dedicated to quality,
                         craft, and the creative community.</p>
@@ -167,6 +268,7 @@
                     <ul>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="services.html">Services</a></li>
+                        <li><a href="catalogs.html">Catalogs</a></li>
                         <li><a href="work.html">Portfolio</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
@@ -191,7 +293,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Midnight Owls Creative. All rights reserved.</p>
+                <p>&copy; 2026 Midnight Owls Creative. All rights reserved.</p>
             </div>
         </div>
     </footer>

@@ -142,4 +142,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Hero Parallax Effect
+    const heroSection = document.querySelector('.hero-wrapper');
+    const heroMesh = document.querySelector('.hero-mesh');
+
+    if (heroSection && heroMesh) {
+        heroSection.addEventListener('mousemove', (e) => {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+
+            // Subtle movement
+            const moveX = (x - 0.5) * 20; // -10px to +10px
+            const moveY = (y - 0.5) * 20;
+
+            heroMesh.style.transform = `translate(${moveX}px, ${moveY}px) scale(1.05)`;
+        });
+    }
+
 });
