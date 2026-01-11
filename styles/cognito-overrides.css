@@ -1,0 +1,98 @@
+/* Cognito Forms Custom Integration */
+.cognito-form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Force override Cognito's internal styles where possible via specificity */
+.cognito .c-forms-form {
+    font-family: var(--font-body) !important;
+    color: var(--color-off-white) !important;
+}
+
+/* Headings */
+.cognito .c-forms-heading h2,
+.cognito .c-forms-heading .c-label {
+    font-family: var(--font-heading) !important;
+    color: var(--color-owl-gold) !important;
+    font-weight: 700 !important;
+    font-size: 1.5rem !important;
+}
+
+/* Labels */
+.cognito .c-label {
+    color: var(--color-cool-gray) !important;
+    font-weight: 500 !important;
+}
+
+/* Inputs */
+.cognito .c-field input,
+.cognito .c-field textarea,
+.cognito .c-field select {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: var(--color-off-white) !important;
+    border-radius: 4px !important;
+    padding: 0.75rem !important;
+    transition: border-color 0.3s ease !important;
+}
+
+.cognito .c-field input:focus,
+.cognito .c-field textarea:focus,
+.cognito .c-field select:focus {
+    border-color: var(--color-deep-teal) !important;
+    background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Add custom arrow for selects if possible, though browser default often overrides */
+
+/* Checkboxes & Radios */
+.cognito .c-choice-option input[type="radio"],
+.cognito .c-choice-option input[type="checkbox"] {
+    accent-color: var(--color-owl-gold) !important;
+}
+
+/* Buttons */
+.cognito button.c-button {
+    background-color: var(--color-deep-teal) !important;
+    color: var(--color-off-white) !important;
+    font-family: var(--font-heading) !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    padding: 1rem 2rem !important;
+    border-radius: 4px !important;
+    border: none !important;
+    transition: all 0.3s ease !important;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.cognito button.c-button:hover {
+    box-shadow: 0 0 20px rgba(14, 90, 106, 0.6) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Field Description / Help Text */
+.cognito .c-validation,
+.cognito .c-help-text {
+    color: var(--color-cool-gray) !important;
+    font-size: 0.85rem !important;
+}
+
+/* File Upload */
+.cognito .c-upload-button {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: var(--color-off-white) !important;
+}
+
+/* Error States */
+.cognito .c-state-error input,
+.cognito .c-state-error textarea {
+    border-color: var(--color-magenta-plum) !important;
+}
+
+.cognito .c-validation {
+    color: var(--color-magenta-plum) !important;
+}

@@ -24,6 +24,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/cognito-overrides.css">
 </head>
 
 <body>
@@ -72,100 +73,97 @@
 
         <section class="section-padding">
             <div class="container" style="max-width: 800px;">
-                <form>
-                    <!-- Section 1: Contact -->
-                    <h3 style="margin-bottom: 1.5rem; color: var(--color-off-white);">1. Contact Details</h3>
-                    <div class="grid-2 mb-2" style="gap: 1.5rem; align-items: start;">
-                        <div>
-                            <label for="quote-name" class="form-label">Name</label>
-                            <input type="text" id="quote-name" class="form-input" required>
-                        </div>
-                        <div>
-                            <label for="quote-email" class="form-label">Email</label>
-                            <input type="email" id="quote-email" class="form-input" required>
-                        </div>
+                <!-- Pre-Submit Info -->
+                <div
+                    style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 1.5rem; margin-bottom: 2rem; text-align: left;">
+                    <h4 style="color: var(--color-owl-gold); margin-bottom: 0.5rem;">Before you submit...</h4>
+                    <p style="color: var(--color-cool-gray); font-size: 0.9rem; margin-bottom: 1rem;">
+                        Ensure your project runs smoothly by checking our guidelines first.
+                    </p>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <a href="resources/print-specs.html" target="_blank"
+                            style="color: var(--color-off-white); text-decoration: underline; font-size: 0.9rem;">View
+                            Print Specs »</a>
+                        <a href="services.html#faq" target="_blank"
+                            style="color: var(--color-off-white); text-decoration: underline; font-size: 0.9rem;">Read
+                            FAQ »</a>
+                        <a href="resources/art-guidelines.html" target="_blank"
+                            style="color: var(--color-off-white); text-decoration: underline; font-size: 0.9rem;">Art
+                            Guidelines »</a>
                     </div>
-                    <div class="form-group">
-                        <label for="quote-org" class="form-label">Organization / Brand</label>
-                        <input type="text" id="quote-org" class="form-input">
-                    </div>
+                </div>
 
-                    <!-- Section 2: Project Details -->
-                    <h3 style="margin-top: 3rem; margin-bottom: 1.5rem; color: var(--color-off-white);">2. Project &
-                        Garment
-                        Details</h3>
+                <!-- Cognito Forms Styles (Inlined for reliability) -->
+                <style>
+                    /* Force Dark Mode Override for Cognito */
+                    .cognito .c-forms-form {
+                        font-family: 'Inter', sans-serif !important;
+                        color: #F5F7F6 !important;
+                        background: transparent !important;
+                    }
 
-                    <div class="grid-2 mb-2" style="gap: 1.5rem; align-items: start;">
-                        <div>
-                            <label for="deadline" class="form-label">Hard Deadline (if any)</label>
-                            <input type="date" id="deadline" class="form-input">
-                        </div>
-                        <div>
-                            <label for="garment-type" class="form-label">Garment Type & Color</label>
-                            <input type="text" id="garment-type" class="form-input"
-                                placeholder="e.g. Bella Canvas 3001 Black Tee">
-                        </div>
-                    </div>
+                    /* Header Override */
+                    .cognito h2 {
+                        font-family: 'Montserrat', sans-serif !important;
+                        color: #D6A24A !important;
+                        font-size: 1.5rem !important;
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+                        padding-bottom: 0.5rem !important;
+                    }
 
-                    <div class="grid-2 mb-2" style="gap: 1.5rem; align-items: start;">
-                        <div>
-                            <label for="quantity" class="form-label">Total Quantity</label>
-                            <input type="number" id="quantity" class="form-input" placeholder="e.g. 50">
-                        </div>
-                        <div>
-                            <label for="print-locations" class="form-label">Print Locations</label>
-                            <select id="print-locations" class="form-input" style="appearance: auto;">
-                                <option value="front_only">Front Only</option>
-                                <option value="back_only">Back Only</option>
-                                <option value="front_back">Front & Back</option>
-                                <option value="sleeve">Sleeve / Custom</option>
-                            </select>
-                        </div>
-                    </div>
+                    /* Labels */
+                    .cognito .c-label {
+                        color: #9BA7AD !important;
+                        font-weight: 500 !important;
+                        font-size: 0.95rem !important;
+                    }
 
-                    <!-- Section 3: Artwork & Design -->
-                    <h3 style="margin-top: 3rem; margin-bottom: 1.5rem; color: var(--color-off-white);">3. Artwork &
-                        Design</h3>
+                    /* Inputs & Textareas */
+                    .cognito input[type="text"],
+                    .cognito input[type="email"],
+                    .cognito textarea,
+                    .cognito select {
+                        background-color: rgba(255, 255, 255, 0.05) !important;
+                        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+                        color: #fff !important;
+                        border-radius: 4px !important;
+                        padding: 10px !important;
+                    }
 
-                    <div class="form-group">
-                        <label class="form-label">Do you have artwork?</label>
-                        <div style="display: flex; gap: 2rem; margin-top: 0.5rem; color: var(--color-cool-gray);">
-                            <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
-                                <input type="radio" name="art_status" value="ready" checked
-                                    style="accent-color: var(--color-owl-gold);">
-                                Yes, I have print-ready art (Vector/High-Res)
-                            </label>
-                            <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
-                                <input type="radio" name="art_status" value="need_design"
-                                    style="accent-color: var(--color-owl-gold);">
-                                No, I need design help
-                            </label>
-                        </div>
-                    </div>
+                    .cognito input:focus,
+                    .cognito textarea:focus,
+                    .cognito select:focus {
+                        border-color: #0E5A6A !important;
+                        background-color: rgba(255, 255, 255, 0.08) !important;
+                        outline: none !important;
+                        box-shadow: 0 0 0 2px rgba(14, 90, 106, 0.3) !important;
+                    }
 
-                    <div class="grid-2 mb-2" style="gap: 1.5rem; align-items: start;">
-                        <div>
-                            <label for="ink-colors-front" class="form-label"># of Colors (Front)</label>
-                            <input type="number" id="ink-colors-front" class="form-input" placeholder="0-6">
-                        </div>
-                        <div>
-                            <label for="ink-colors-back" class="form-label"># of Colors (Back)</label>
-                            <input type="number" id="ink-colors-back" class="form-input" placeholder="0-6">
-                        </div>
-                    </div>
+                    /* Submit Button */
+                    .cognito .c-button {
+                        background-color: #0E5A6A !important;
+                        color: #fff !important;
+                        font-family: 'Montserrat', sans-serif !important;
+                        text-transform: uppercase !important;
+                        font-weight: 700 !important;
+                        border-radius: 4px !important;
+                        border: none !important;
+                        padding: 12px 24px !important;
+                        margin-top: 1rem !important;
+                    }
 
-                    <div class="form-group" style="margin-top: 2rem;">
-                        <label for="additional-notes" class="form-label">Additional Notes / Upload Link</label>
-                        <textarea id="additional-notes" class="form-textarea" rows="4"
-                            placeholder="Any specific instructions, links to artwork files, or questions?"></textarea>
-                    </div>
+                    .cognito .c-button:hover {
+                        background-color: #1BB3B0 !important;
+                        transform: translateY(-2px);
+                        box-shadow: 0 4px 12px rgba(27, 179, 176, 0.3) !important;
+                    }
+                </style>
 
-                    <div style="margin-top: 4rem; text-align: center;">
-                        <button type="submit" class="btn btn-primary" style="width: 100%; max-width: 300px;">Request
-                            Quote</button>
-                    </div>
-
-                </form>
+                <!-- Cognito Forms Embed Container -->
+                <div class="cognito-wrapper">
+                    <script src="https://www.cognitoforms.com/f/seamless.js" data-key="7GILyqMqCEOzXnDEIPu9-w"
+                        data-form="79"></script>
+                </div>
             </div>
         </section>
     </main>
