@@ -63,9 +63,8 @@
                     <span class="hero-pill">🚀 Ready to Launch</span>
                     <h1 class="hero-title-page">Start Your <span class="text-gradient-gold">Order</span></h1>
                     <p class="hero-subtitle-modern">
-                        Tell us about your project. We'll get back to you with a custom quote and digital mockup
-                        within
-                        24 hours.
+                        Tell us about your project. Our team will review your request and reach out to confirm
+                        availability.
                     </p>
                 </div>
             </div>
@@ -75,10 +74,17 @@
             <div class="container" style="max-width: 800px;">
                 <!-- Pre-Submit Info -->
                 <div
-                    style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 1.5rem; margin-bottom: 2rem; text-align: left;">
-                    <h4 style="color: var(--color-owl-gold); margin-bottom: 0.5rem;">Before you submit...</h4>
-                    <p style="color: var(--color-cool-gray); font-size: 0.9rem; margin-bottom: 1rem;">
-                        Ensure your project runs smoothly by checking our guidelines first.
+                    style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-left: 4px solid var(--color-owl-gold); border-radius: 8px; padding: 1.5rem; margin-bottom: 2rem; text-align: left;">
+                    <h4 style="color: var(--color-owl-gold); margin-bottom: 0.75rem;">Order Process Verification</h4>
+                    <p
+                        style="color: var(--color-off-white); font-size: 0.95rem; margin-bottom: 1rem; line-height: 1.6;">
+                        <strong>Submitting this form does not begin the order process.</strong> A rep will review your
+                        request and email or call with confirmation and to verify any necessary details. Once the order
+                        is confirmed on our side we will begin the production process.
+                    </p>
+                    <p style="color: var(--color-cool-gray); font-size: 0.9rem; margin-bottom: 1.5rem;">
+                        If you do not hear from us within 48 hours please call Andrew at <strong>(727)
+                            480-4399</strong>.
                     </p>
                     <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
                         <a href="resources/print-specs.html" target="_blank"
@@ -93,74 +99,116 @@
                     </div>
                 </div>
 
-                <!-- Cognito Forms Styles (Inlined for reliability) -->
+                <!-- Cognito Forms Styles (Inlined for reliability and specificity) -->
                 <style>
-                    /* Force Dark Mode Override for Cognito */
-                    .cognito .c-forms-form {
-                        font-family: 'Inter', sans-serif !important;
-                        color: #F5F7F6 !important;
-                        background: transparent !important;
+                    /* DEBUGGING - If you see a GOLD border, styles are loading */
+                    .cognito {
+                        border: 2px solid transparent;
+                        padding: 1rem;
                     }
 
-                    /* Header Override */
-                    .cognito h2 {
+                    /* GLOBAL OVERRIDES - Using * selector to force inheritance */
+                    .cognito * {
+                        font-family: 'Inter', sans-serif !important;
+                        box-sizing: border-box !important;
+                    }
+
+                    /* FORCE BACKGROUNDS VIA ATTRIBUTE SELECTORS (Stronger than classes) */
+                    [class*="cog-form"] {
+                        background: transparent !important;
+                        color: #F5F7F6 !important;
+                    }
+
+                    /* HEADINGS */
+                    .cognito h2,
+                    .cognito .cog-header {
                         font-family: 'Montserrat', sans-serif !important;
                         color: #D6A24A !important;
-                        font-size: 1.5rem !important;
                         border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
                         padding-bottom: 0.5rem !important;
+                        margin-bottom: 1.5rem !important;
                     }
 
-                    /* Labels */
-                    .cognito .c-label {
-                        color: #9BA7AD !important;
-                        font-weight: 500 !important;
-                        font-size: 0.95rem !important;
-                    }
-
-                    /* Inputs & Textareas */
-                    .cognito input[type="text"],
-                    .cognito input[type="email"],
+                    /* INPUTS - Targeting all input types explicitly */
+                    .cognito input,
                     .cognito textarea,
-                    .cognito select {
+                    .cognito select,
+                    .cognito .el-input__inner {
                         background-color: rgba(255, 255, 255, 0.05) !important;
                         border: 1px solid rgba(255, 255, 255, 0.1) !important;
-                        color: #fff !important;
+                        color: #ffffff !important;
                         border-radius: 4px !important;
                         padding: 10px !important;
                     }
 
                     .cognito input:focus,
                     .cognito textarea:focus,
-                    .cognito select:focus {
+                    .cognito .el-input__inner:focus {
                         border-color: #0E5A6A !important;
                         background-color: rgba(255, 255, 255, 0.08) !important;
-                        outline: none !important;
                         box-shadow: 0 0 0 2px rgba(14, 90, 106, 0.3) !important;
                     }
 
-                    /* Submit Button */
-                    .cognito .c-button {
-                        background-color: #0E5A6A !important;
-                        color: #fff !important;
+                    /* LABELS */
+                    .cognito label,
+                    .cognito .cog-label {
+                        color: #9BA7AD !important;
+                        font-weight: 500 !important;
+                        margin-bottom: 5px !important;
+                        display: block !important;
+                    }
+
+                    /* CHECKBOXES & RADIOS */
+                    .cognito .el-checkbox,
+                    .cognito .el-radio {
+                        color: #F5F7F6 !important;
+                        white-space: normal !important;
+                        display: flex !important;
+                        align-items: flex-start !important;
+                        margin-bottom: 0.5rem !important;
+                    }
+
+                    /* SUBMIT BUTTON */
+                    .cognito button[type="submit"],
+                    .cognito .cog-button--submit,
+                    .cognito .cog-button--primary {
+                        background-color: #1BB3B0 !important;
+                        /* Electric Teal */
+                        background-image: none !important;
+                        color: #ffffff !important;
+                        border: none !important;
                         font-family: 'Montserrat', sans-serif !important;
                         text-transform: uppercase !important;
                         font-weight: 700 !important;
+                        padding: 14px 30px !important;
                         border-radius: 4px !important;
-                        border: none !important;
-                        padding: 12px 24px !important;
-                        margin-top: 1rem !important;
+                        width: 100% !important;
+                        max-width: 300px !important;
+                        /* Max width for Quote form */
+                        cursor: pointer !important;
+                        box-shadow: none !important;
+                        transition: all 0.3s ease !important;
                     }
 
-                    .cognito .c-button:hover {
-                        background-color: #1BB3B0 !important;
+                    .cognito button[type="submit"]:hover,
+                    .cognito .cog-button--submit:hover,
+                    .cognito .cog-button--primary:hover {
+                        background-color: #0E5A6A !important;
+                        /* Deep Teal on Hover */
                         transform: translateY(-2px);
-                        box-shadow: 0 4px 12px rgba(27, 179, 176, 0.3) !important;
+                        box-shadow: 0 4px 15px rgba(27, 179, 176, 0.4) !important;
+                    }
+
+                    /* HIDING "Powered By" */
+                    .cognito .cog-powered-by,
+                    a[href*="cognitoforms.com"] {
+                        display: none !important;
+                        opacity: 0 !important;
                     }
                 </style>
 
                 <!-- Cognito Forms Embed Container -->
-                <div class="cognito-wrapper">
+                <div class="cognito">
                     <script src="https://www.cognitoforms.com/f/seamless.js" data-key="7GILyqMqCEOzXnDEIPu9-w"
                         data-form="79"></script>
                 </div>

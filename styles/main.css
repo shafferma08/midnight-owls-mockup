@@ -260,12 +260,12 @@ nav {
 
 .hero-inner {
     min-height: 40vh;
-    /* Reduced to avoid excessive bottom space */
-    padding-top: 200px;
-    /* Increased to clear fixed header */
+    padding-top: 150px;
     padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    /* Center content vertically */
     text-align: center;
 }
 

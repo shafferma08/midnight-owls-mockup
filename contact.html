@@ -70,7 +70,7 @@
             <div class="hero-mesh mesh-teal"></div>
             <div class="container" style="position: relative; z-index: 2;">
                 <div class="hero-content hero-center-text">
-                    <span class="hero-pill">👋 Get In Touch</span>
+                    <span class="hero-pill">Get In Touch</span>
                     <h1 class="hero-title-page">Let's <span class="text-gradient-teal">Create</span></h1>
                     <p class="hero-subtitle-modern">
                         Have a project in mind? We're ready to listen. Drop us a line or swing by the studio.
@@ -84,11 +84,12 @@
                 <div class="grid-split">
                     <div>
                         <h2 class="section-title">Contact Info</h2>
-                        <p class="section-desc">We reply to all emails within 24 hours.</p>
+                        <!-- <p class="section-desc">We reply to all emails within 24 hours.</p> -->
                         <ul style="margin-top: 2rem;">
                             <li style="margin-bottom: 1rem;"><strong>Email:</strong> <a
-                                    href="mailto:hello@midnightowls.com"
-                                    style="color: var(--color-deep-teal);">hello@midnightowls.com</a></li>
+                                    href="mailto:andrew@midnightowls.com"
+                                    style="color: var(--color-electric-teal); font-weight: 600;">andrew@midnightowls.com</a>
+                            </li>
                             <li style="margin-bottom: 1rem;"><strong>Phone:</strong> (727) 480-4399</li>
                             <li style="margin-bottom: 1rem;"><strong>Studio:</strong> 6741 102nd Ave N #20, Pinellas
                                 Park,
@@ -97,22 +98,99 @@
                     </div>
                     <div>
                         <!-- Simple Contact Form -->
-                        <form class="contact-form" style="display: flex; flex-direction: column; gap: 1rem;">
-                            <label for="contact-name" class="sr-only"
-                                style="position:absolute; left:-9999px;">Name</label>
-                            <input type="text" id="contact-name" placeholder="Name" class="form-input">
+                        <style>
+                            /* DEBUGGING - If you see a GOLD border, styles are loading */
+                            .cognito {
+                                border: 2px solid transparent;
+                                /* Set to #D6A24A to debug */
+                                padding: 1rem;
+                            }
 
-                            <label for="contact-email" class="sr-only"
-                                style="position:absolute; left:-9999px;">Email</label>
-                            <input type="email" id="contact-email" placeholder="Email" class="form-input">
+                            /* GLOBAL OVERRIDES - Using * selector to force inheritance */
+                            .cognito * {
+                                font-family: 'Inter', sans-serif !important;
+                                box-sizing: border-box !important;
+                            }
 
-                            <label for="contact-message" class="sr-only"
-                                style="position:absolute; left:-9999px;">Message</label>
-                            <textarea id="contact-message" placeholder="Message" rows="5"
-                                class="form-textarea"></textarea>
+                            /* FORCE BACKGROUNDS VIA ATTRIBUTE SELECTORS (Stronger than classes) */
+                            [class*="cog-form"] {
+                                background: transparent !important;
+                                color: #F5F7F6 !important;
+                            }
 
-                            <button type="submit" class="btn btn-primary">Send Message</button>
-                        </form>
+                            /* INPUTS - Targeting all input types explicitly */
+                            .cognito input,
+                            .cognito textarea,
+                            .cognito select,
+                            .cognito .el-input__inner {
+                                background-color: rgba(255, 255, 255, 0.05) !important;
+                                border: 1px solid rgba(255, 255, 255, 0.1) !important;
+                                color: #ffffff !important;
+                                border-radius: 4px !important;
+                                padding: 10px !important;
+                            }
+
+                            .cognito input:focus,
+                            .cognito textarea:focus,
+                            .cognito .el-input__inner:focus {
+                                border-color: #0E5A6A !important;
+                                background-color: rgba(255, 255, 255, 0.08) !important;
+                                box-shadow: 0 0 0 2px rgba(14, 90, 106, 0.3) !important;
+                            }
+
+                            /* LABELS */
+                            .cognito label,
+                            .cognito .cog-label {
+                                color: #9BA7AD !important;
+                                font-weight: 500 !important;
+                                margin-bottom: 5px !important;
+                                display: block !important;
+                            }
+
+                            /* SUBMIT BUTTON - The Nuclear Option */
+                            /* Targeting every possible combination to force the color */
+                            .cognito button[type="submit"],
+                            .cognito .cog-button--submit,
+                            .cognito .cog-button--primary,
+                            .cognito .el-button--primary {
+                                background-color: #1BB3B0 !important;
+                                /* Electric Teal */
+                                background-image: none !important;
+                                color: #ffffff !important;
+                                border: none !important;
+                                font-family: 'Montserrat', sans-serif !important;
+                                text-transform: uppercase !important;
+                                font-weight: 700 !important;
+                                padding: 14px 30px !important;
+                                border-radius: 4px !important;
+                                width: 100% !important;
+                                cursor: pointer !important;
+                                box-shadow: none !important;
+                                transition: all 0.3s ease !important;
+                            }
+
+                            .cognito button[type="submit"]:hover,
+                            .cognito .cog-button--submit:hover,
+                            .cognito .cog-button--primary:hover {
+                                background-color: #0E5A6A !important;
+                                /* Deep Teal on Hover */
+                                transform: translateY(-2px);
+                                box-shadow: 0 4px 15px rgba(27, 179, 176, 0.4) !important;
+                            }
+
+                            /* HIDING "Powered By" */
+                            .cognito .cog-powered-by,
+                            a[href*="cognitoforms.com"] {
+                                display: none !important;
+                                opacity: 0 !important;
+                            }
+                        </style>
+
+                        <!-- Cognito Forms Embed Container -->
+                        <div class="cognito">
+                            <script src="https://www.cognitoforms.com/f/seamless.js" data-key="7GILyqMqCEOzXnDEIPu9-w"
+                                data-form="80"></script>
+                        </div>
                     </div>
                 </div>
             </div>
