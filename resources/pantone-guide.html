@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantone Color Guide | Standard Ink Colors | Midnight Owls</title>
+    <meta name="description"
+        content="Midnight Owls Standard Ink Color Chart. View our most popular stock colors for screenprinting. Matches Solid Coated Pantone system.">
+    <link rel="canonical" href="https://www.midnightowls.com/resources/pantone-guide.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Pantone Ink Color Guide">
+    <meta property="og:description"
+        content="Don't guess. Pick the right color. View our top 50 standard plastisol ink colors.">
+    <meta property="og:url" content="https://www.midnightowls.com/resources/pantone-guide.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@600;700&family=Space+Grotesk:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .guide-hero {
+            padding: 6rem 0 3rem;
+            text-align: center;
+            background: var(--color-midnight-black);
+        }
+
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .color-swatch {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.2s ease;
+        }
+
+        .color-swatch:hover {
+            transform: scale(1.05);
+            border-color: var(--color-owl-gold);
+        }
+
+        .swatch-preview {
+            height: 100px;
+            width: 100%;
+        }
+
+        .swatch-info {
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .swatch-name {
+            display: block;
+            font-weight: 700;
+            color: var(--color-off-white);
+            margin-bottom: 0.25rem;
+            font-size: 0.9rem;
+        }
+
+        .swatch-pms {
+            display: block;
+            font-size: 0.8rem;
+            color: var(--color-cool-gray);
+            font-family: monospace;
+        }
+
+        .print-btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--color-electric-teal);
+            color: var(--color-electric-teal);
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        @media print {
+
+            header,
+            footer,
+            .print-btn {
+                display: none;
+            }
+
+            body {
+                background: white;
+                color: black;
+            }
+
+            .color-swatch {
+                border: 1px solid #ccc;
+                break-inside: avoid;
+            }
+
+            .swatch-name,
+            .swatch-pms {
+                color: black;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav style="flex-direction: row; justify-content: space-between; align-items: center; padding: 0 1rem;">
+                <a href="../index.html" class="logo">
+                    Midnight<span>Owls</span>
+                </a>
+                <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+                <div class="nav-links">
+                    <a href="../index.html">Home</a>
+                    <a href="../services.html">Services</a>
+                    <a href="../catalogs.html">Catalogs</a>
+                    <a href="../hub.html" class="active">The Hub</a>
+                    <a href="../work.html">Work</a>
+                    <a href="../about.html">About</a>
+                    <a href="../contact.html">Contact</a>
+                    <a href="../quote.html" class="btn btn-primary mobile-menu-btn" style="display: none;">Start an
+                        Order</a>
+                </div>
+                <!-- Desktop Only Button -->
+                <a href="../quote.html" class="btn btn-primary">Start an Order</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="guide-hero">
+            <div class="container">
+                <a href="../hub.html" class="btn btn-outline btn-sm" style="margin-bottom: 2rem;"><i
+                        class="fa-solid fa-arrow-left"></i> Back to Hub</a>
+                <br>
+                <span class="hero-pill">Resource</span>
+                <h1 class="hero-title-page">Standard Ink Colors</h1>
+                <p style="color: var(--color-cool-gray);">
+                    Our top requested Plastisol colors. These are "Stock Colors" and have no mixing fee.<br>
+                    (PMS colors are approximate simulations for screen viewing).
+                </p>
+                <button onclick="window.print()" class="print-btn">🖨️ Print Page</button>
+            </div>
+        </div>
+
+        <div class="section-padding">
+            <div class="container">
+                <div class="color-grid">
+                    <!-- White/Black -->
+                    <div class="color-swatch">
+                        <div class="swatch-preview" style="background-color: #FFFFFF;"></div>
+                        <div class="swatch-info">
+                            <span class="swatch-name">White</span>
+                            <span class="swatch-pms">Standard</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="swatch-preview" style="background-color: #000000;"></div>
+                        <div class="swatch-info">
+                            <span class="swatch-name">Black</span>
+                            <span class="swatch-pms">Standard</span>
+                        </div>
+                    </div>
+
+                    <!-- Yellows/Oranges -->
+                    <div class="color-swatch">
+                        <div class="swatch-preview" style="background-color: #FFCD00;"></div>
+                        <div class="swatch-info">
+                            <span class="swatch-name">Lemon Yellow</span>
+                            <span class="swatch-pms">PMS 109 C</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="swatch-preview" style="background-color: #FFB81C;"></div>
+                        <div class="swatch-info">
+                            <span class="swatch-name">Gold</span>
+                            <span class="swatch-pms">PMS 123 C</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="swatch-preview" style="background-color: #FF671F;"></div>
+                        <div class="swatch-info">
+                            <span class="swatch-name">Orange</span>
+                            <span class="swatch-pms">PMS 021 C</span>
+                        </div>
+                    </div>
+
+                    <!-- Reds -->
+                    <div class="color-swatch">
+                        <div class="swatch-preview" style="background-color: #E31C23;"></div>
+                        <div class="swatch-info">
+                            <span class="swatch-name">Bright Red</span>
+                            <span class="swatch-pms">PMS 186 C</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="swatch-preview" style="background-color: #9D2235;"></div>
+                        <div class="swatch-info">
+                            <span class="swatch-name">Cardinal</span>
+                            <span class="swatch-pms">PMS 201 C</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="swatch-preview" style="background-color: #63001E;"></div>
+                        <div class="swatch-info">
+                            <span class="swatch-name">Maroon</span>
+                            <span class="swatch-pms">PMS 209 C</span>
+                        </div>
+                    </div>
+
+                    <!-- Blues -->
+                    <div class="color-swatch">
+                        <div class="swatch-preview" style="background-color: #93C9EA;"></div>
+                        <div class="swatch-info">
+                            <span class="swatch-name">Columbia Blue</span>
+                            <span class="swatch-pms">PMS 278 C</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="swatch-preview" style="background-color: #0085CA;"></div>
+                        <div class="swatch-info">
+                            <span class="swatch-name">Royal Blue</span>
+                            <span class="swatch-pms">PMS 661 C</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="swatch-preview" style="background-color: #00263E;"></div>
+                        <div class="swatch-info">
+                            <span class="swatch-name">Navy</span>
+                            <span class="swatch-pms">PMS 289 C</span>
+                        </div>
+                    </div>
+
+                    <!-- Greens -->
+                    <div class="color-swatch">
+                        <div class="swatch-preview" style="background-color: #78BE20;"></div>
+                        <div class="swatch-info">
+                            <span class="swatch-name">Lime Green</span>
+                            <span class="swatch-pms">PMS 375 C</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="swatch-preview" style="background-color: #007A33;"></div>
+                        <div class="swatch-info">
+                            <span class="swatch-name">Kelly Green</span>
+                            <span class="swatch-pms">PMS 348 C</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="swatch-preview" style="background-color: #555D50;"></div>
+                        <div class="swatch-info">
+                            <span class="swatch-name">Military Green</span>
+                            <span class="swatch-pms">PMS 418 C</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer style="text-align: center; padding: 2rem; border-top: 1px solid rgba(255,255,255,0.1);">
+        <p style="color: var(--color-cool-gray); font-size: 0.9rem;">
+            *Disclaimer: These are digital representations. Actual ink color will vary slightly depending on curing and
+            garment fabric color.
+        </p>
+    </footer>
+</body>
+
+</html>
