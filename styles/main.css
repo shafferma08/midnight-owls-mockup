@@ -763,64 +763,58 @@ footer {
 
 @media (max-width: 768px) {
 
-    /* Mobile Header Layout: Stacked Single Column */
+    /* Mobile Header Layout: Row based for space efficiency */
     nav {
-        flex-direction: column;
-        justify-content: center;
+        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
-        gap: 0.75rem;
+        padding: 0 1rem;
     }
 
-    .logo {
-        flex-basis: auto;
-        text-align: center;
-        order: 1;
-        margin-bottom: 0;
-    }
-
+    /* Logo scaling for mobile */
     .logo img {
-        height: 80px;
-        /* Increased from 60px per user request */
-        margin: 0 auto;
+        height: 50px;
+        /* Smaller on mobile to prevent scrunching */
+        margin: 0;
     }
 
-    /* Start Order Button on Mobile */
+    /* Hide the desktop button on mobile header to un-clutter */
     nav .btn-primary {
-        order: 2;
-        padding: 0.75rem 1.25rem;
-        font-size: 0.9rem;
-        margin-right: 0;
-        /* Removing auto margin to center */
-        display: block !important;
-        width: 100%;
-        /* Full width button for better mobile UX */
-        text-align: center;
-        max-width: 250px;
+        display: none !important;
     }
 
+    /* Toggle stays transparent/visible */
     .mobile-toggle {
         display: block;
-        z-index: 1000;
-        order: 3;
-        margin-left: 0;
-        /* Removing auto margin */
-        margin-top: 0.5rem;
+        z-index: 10001;
+        /* Ensure above overlay */
+        order: 2;
+        /* Right side */
+        margin: 0;
+        font-size: 1.8rem;
+        /* Larger touch target */
+        padding: 0.5rem;
     }
 
+    /* Fullscreen Overlay adjustment */
     .nav-links {
         display: none;
         position: fixed;
-        /* Fixed to cover screen */
         top: 0;
         left: 0;
         width: 100%;
         height: 100vh;
-        background: var(--color-midnight-black);
+        background: rgba(11, 11, 14, 0.98);
+        /* Less transparent for readability */
+        backdrop-filter: blur(10px);
         flex-direction: column;
         justify-content: center;
+        /* Center items vertically */
         align-items: center;
         padding: 2rem;
-        z-index: 999;
+        z-index: 10000;
+        padding-top: 5rem;
+        /* Push items down slightly to clear the X area perfectly */
     }
 
     .nav-links.active {
@@ -828,13 +822,32 @@ footer {
     }
 
     .nav-links a {
-        font-size: 1.5rem;
-        margin-bottom: 1.5rem;
+        font-size: 1.75rem;
+        /* Larger mobile text */
+        margin-bottom: 2rem;
+        font-weight: 600;
+        opacity: 0;
+        /* Animation setup */
+        animation: fadeInLink 0.3s ease forwards;
+    }
+
+    .nav-links .mobile-menu-btn {
+        display: inline-block !important;
+        margin-top: 1rem;
+        width: auto;
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+    }
+
+    @keyframes fadeInLink {
+        to {
+            opacity: 1;
+        }
     }
 
     /* Mobile Header & Hero Adjustments */
     header {
-        padding: 0.5rem 0;
+        padding: 1rem 0;
     }
 
     .hero-home {
